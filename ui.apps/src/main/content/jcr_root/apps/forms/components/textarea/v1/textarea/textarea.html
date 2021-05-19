@@ -1,0 +1,54 @@
+<template data-sly-template.i18="${@ key}">
+   ${key @ i18n}
+</template>
+
+<div data-sly-test.author="${(wcmmode.edit || wcmmode.design)}" data-sly-unwrap></div>
+<div data-sly-use.model="com.forms.core.core.models.FormElementValidatorModel" data-sly-unwrap></div>
+
+<div data-sly-test="${model.checkFormContainer @context='html'}" data-sly-unwrap>
+	<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+	<sly data-sly-call="${clientlib.css @ categories='forms.component.textarea'}" />
+	<div data-sly-test="${properties.fieldId}" data-sly-unwrap>
+		<div class="fts-wrapper">
+			<label class="fts-form-field-label fts-formTextfield-label" for="${properties.fieldId}">${properties.fieldlabel @i18n}
+				<span class="fts-form-field-optional">${properties.fieldOptionalLabel @i18n}</span>
+				<div class="fts-form-field-sublabel">${properties.fieldSubLabel @i18n}</div>
+			</label>
+			<div class="fts-form__group fts-nested-textarea">
+				<div class="fts-form__textarea-wrapper ">
+					<textarea id="${properties.fieldId}" name="${properties.fieldId}"
+						class="fts-textarea fts-form-field-input" placeholder="${properties.fieldPlaceholder}"></textarea>
+					<div class="fts-form__group fts-nested-file fts-form-field-input">
+						<div class="fts-form__file-wrapper">
+							<div class="fts-file fts-border-color">
+								<input type="file" class="uploadFile" name="${properties.fieldId}-attachments" id="${properties.fieldId}-attachments" onchange="viewAttachment(this)">
+								<div class="fts-file__label fts-form-field-label">Attachments <span>(10 MB limit)</span></div>
+								<div class="fts-file__cta fts-form-field-label">Attach file<span class="fts-svg fts-attachment"></span></div>
+                                
+							</div>
+							<div class="fts-cloud">
+								<div id="feed__attachments-list" class="feed__attachments-list"></div>
+							</div>
+						</div>
+						<input type="hidden" id="attachmentId" name="attachmentArr" value="" />
+						<input type="hidden" id="attachArr" name="attachArr" value="" />
+						<input type="hidden" id="fileArr" name="fileArr" value="" />
+					</div>
+				</div>				
+				<label id="${properties.fieldId}-error" class="error" for="${properties.fieldId}"></label>
+				<label id="${properties.fieldId}-attachments-error" class="error" for="${properties.fieldId}-attachments"></label>
+			</div>
+		</div>
+		<div data-sly-test="${!author}">
+			<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+			<sly data-sly-call="${clientlib.js @ categories='forms.component.textarea'}" />
+		</div>		
+	</div>
+	<div data-sly-test="${author && !properties.fieldId}">
+		<h2 style="color : red;">Please configure the textarea !</h2>
+	</div>
+</div>
+
+<div data-sly-test="${!model.checkFormContainer @context='html'}">
+	${model.message @context='html'}
+</div>

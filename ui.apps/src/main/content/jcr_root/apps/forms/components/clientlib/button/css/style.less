@@ -1,0 +1,194 @@
+@import (less) 'button.css';
+
+.fts-form-button-label {
+    &:extend(.fts-button-text);
+}
+
+.fts-button--plain {
+    .fts-form-button-label {
+        &:extend(.fts-button-text);
+        display: inline-flex;
+        width: auto;
+    }
+}
+
+.fts-button-color--orange button {
+    background-color: #ff5000;
+    color: #fff;
+    border-color: transparent;
+}
+
+.fts-button-color--white button {
+    background-color: #fff;
+    border-color: #4d4d4d;
+    color: #4d4d4d;
+}
+
+.fts-button-color--green button {
+    background-color: #309054;
+    color: #fff;
+    border-color: transparent;
+}
+
+.fts-button-color--blue button {
+    background-color: #001eff;
+    color: #fff;
+    border-color: transparent;
+}
+
+.fts-button-color--gray button {
+    background-color: #4d4d4d;
+    color: #fff;
+    border-color: transparent;
+}
+
+.fts-button-color--darkgray button {
+    background-color: #404040;
+    color: #fff;
+    border-color: transparent;
+}
+
+.fts-button-color--orange button:hover {
+	background-color: #dc4500;
+}
+
+.fts-button-color--orange button:active {
+	background-color: #993500;
+}
+
+.fts-button-color--white button:hover,
+.fts-button-color--white button:active {
+	background-color: #4d4d4d;
+    color: #fff;
+    border-color: transparent;
+}
+
+.fts-button-color--green button:hover {
+	background-color: #267042;
+}
+
+.fts-button-color--green button:active {
+	background-color: #1E5633;
+}
+
+.fts-button-color--blue button:hover {
+	background-color: #001add;
+}
+
+.fts-button-color--blue button:active {
+	background-color: #0013a1;
+}
+
+.fts-button-color--gray button:hover,
+.fts-button-color--gray button:active {
+	background-color: #fff;
+    color: #4d4d4d;
+    border-color: #4d4d4d;
+}
+
+.fts-button-color--darkgray button:hover,
+.fts-button-color--darkgray button:active {
+	background-color: #F4F4F4;
+    color: #404040;
+    border-color: #404040;
+}
+
+.fts-formContainer--marketing {
+	.fts-button--standard button {
+		border-radius: 8px;
+	}
+}    
+.fts-formContainer--myrefinitiv {
+	.fts-button--standard button {
+		border-radius: 5px;
+	}
+}
+
+.fts-button--pill button {
+	border-radius: 100px;
+}
+
+.fts-button--plain button,
+.fts-button--plain button:disabled {
+	border-radius: 0;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0 !important;
+}
+
+.fts-button--plain button:hover,
+.fts-button--plain button:active,
+.fts-button--plain button:disabled:hover,
+.fts-button--plain button:disabled:active {
+	background-color: transparent;
+    border-color: transparent;
+}
+
+.fts-button-position--v1 {
+    text-align: left;
+}
+
+.fts-button-position--v2 {
+    text-align: right;
+}
+
+.fts-button-position--v3 {
+    text-align: center;
+}
+
+.fts-button--plain.fts-svg--visible.fts-button-position--v1 {
+    .fts-svg.fts-button-svg.fts-arrow--left {
+		display: inline-block;
+    }
+}
+
+.fts-button--plain.fts-svg--visible.fts-button-position--v2 {
+    .fts-svg.fts-button-svg.fts-arrow--right {
+		display: inline-block;
+    }
+}
+
+.fts-formContainer--blue,
+.fts-formContainer--black {
+    .fts-button--plain {
+        .fts-form-button-label {
+            color: #fff;
+        }
+    }
+}
+
+.fts-formContainer--grayDark {
+    .fts-button--plain {
+        .fts-form-button-label {
+            color: #f4f4f4;
+        }
+    }
+}
+
+.fts-formContainer--myrefinitiv.fts-formContainer--white {
+	.fts-button--plain {
+        .fts-form-button-label {
+			color: #4d4d4d;
+        }
+
+        .fts-form-button-label:hover,
+        .fts-form-button-label:active {
+            color: #262626;
+        }
+    }
+}
+
+.fts-formContainer--marketing.fts-formContainer--white,
+.fts-formContainer--grayLightest,
+.fts-formContainer--grayLighter {
+    .fts-button--plain {
+        .fts-form-button-label {
+			color: #404040;
+        }
+
+        .fts-form-button-label:hover,
+        .fts-form-button-label:active {
+            color: #262626;
+        }
+    }
+}

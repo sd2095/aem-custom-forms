@@ -1,0 +1,31 @@
+<template data-sly-template.i18="${@ key}">
+   ${key @ i18n}
+</template>
+
+<div data-sly-test.author="${(wcmmode.edit || wcmmode.design)}" data-sly-unwrap></div>
+<div data-sly-use.model="com.forms.core.core.models.FormElementValidatorModel" data-sly-unwrap></div>
+
+<div data-sly-test="${model.checkFormContainer @context='html'}" data-sly-unwrap>
+	<div data-sly-test="${properties.fieldId}" data-sly-unwrap>
+		<div class="fts-wrapper">
+			<a class="fts-button-link" href="${properties.linkpath}" target="${properties.openInNewWindow}">
+				<button class="fts-form-button-label" id="${properties.fieldId}" type="${properties.buttonType}"
+					disabled="${properties.disableButton}">
+					<div>
+						<span class="fts-svg fts-button-svg fts-arrow--left"></span>
+						${properties.label @i18n}
+						<span class="fts-svg fts-button-svg fts-arrow--right"></span>
+					</div>
+				</button>
+			</a>
+		</div>
+	</div>
+
+	<div data-sly-test="${author && !properties.fieldId}">
+		<h2 style="color : red;">Please configure the button !</h2>
+	</div>
+</div>
+
+<div data-sly-test="${!model.checkFormContainer @context='html'}">
+	${model.message @context='html'}
+</div>

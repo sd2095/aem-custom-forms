@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Dropdown Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[forms.component.author-clientlib,forms.listener.dropdown]"
+    height="800"
+    helpPath="https://www.adobe.com/go/aem6_2_docs_component_en"
+    width="800">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                rel="cq-siteadmin-admin-properties-tabs">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                    type="nav"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <tab-about-component
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="About the Component"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <about-the-component
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/text"
+                                text="Dropdown field.  Can be set as the appropriate property."/>
+                        </items>
+                    </tab-about-component>
+                    <tab-properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <name
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Specifies a unique id for the element. Naming rules: Must contain at least one character. Must contain first letter as character .Must not contain any space or tab characters."
+                                fieldLabel="Enter field Id"
+                                name="./fieldId"
+                                required="{Boolean}true"
+                                wrapperClass="fts-inline-grid4"/>
+                            <wrapperId
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter the wrapperClass id"
+                                name="./valueId"
+                                required="{Boolean}true"
+                                wrapperClass="fts-inline-grid4"/>
+                            <label
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter field label"
+                                name="./label"
+                                wrapperClass="fts-inline-grid4"/>
+                            <subLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter field Sub label"
+                                name="./subLabel"
+                                wrapperClass="fts-inline-grid4"/>
+                            <optionalLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter field optional label"
+                                name="./optionalLabel"
+                                wrapperClass="fts-inline-grid4"/>
+                            <placeholderLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter the value of the option to be selected by default"
+                                fieldLabel="Enter field Placeholder"
+                                name="./placeholder"
+                                wrapperClass="fts-inline-grid4"/>
+							<maxSelectionLength
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                fieldDescription="Enter the value of the option to be selected by default"
+                                fieldLabel="Maximum Option Selection"
+                                name="./maxSelectionLength"
+                                wrapperClass="fts-inline-grid4"/>
+                            <enableTooltip
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldLabel="Display tooltip icon"
+                                name="./tooltipIcon"
+                                text="Display tooltip icon"
+                                value="true"/>
+                            <tooltipId
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter Tool-tip Id"
+                                name="./tooltipId"
+                                wrapperClass="fts-inline-grid4"/>
+                            <tooltipText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter Tool-tip Text"
+                                name="./tooltipText"
+                                wrapperClass="fts-inline-grid4"/>
+                            <hideDropdown
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                name="./hideDropdown"
+                                text="Check this box to hide the dropdown by default on page load"
+                                value="true"/>
+                            <multiple
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldLabel="Enable multiple selection"
+                                name="./multipleSelection"
+                                text="Enable multiple selection"
+                                value="true"/>
+                            <grouping
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldLabel="Enable items grouping"
+                                name="./grouping"
+                                text="Enable items grouping"
+                                value="true"/>
+                            <enableTypeAhead
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldLabel="Enable Type Ahead"
+                                name="./enableTypeAhead"
+                                text="Enable Type Ahead"
+                                value="true"/>
+                            <useAsLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldLabel="Enable use as link"
+                                name="./useAsLink"
+                                text="Enable use as link"
+                                value="true"/>
+                            <useAsLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldLabel="Use as label"
+                                name="./useAsLabel"
+                                text="Use as label"
+                                value="true"/>
+                        </items>
+                    </tab-properties>
+                    <tab-options
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Options"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <option-type
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                fieldLabel="Options Source"
+                                name="./optionsSource"
+                                wrapperClass="select-option-source">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <static
+                                        jcr:primaryType="nt:unstructured"
+                                        checked="{Boolean}true"
+                                        text="Manual"
+                                        value="static"/>
+                                    <genericList
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Generic List"
+                                        value="genericlist"/>
+                                    <server
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Server Call"
+                                        value="server"/>
+                                    <script
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Javascript"
+                                        value="jscript"/>
+                                </items>
+                            </option-type>
+							<serverURL
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+								required="{Boolean}true"
+                                fieldLabel="Enter the servlet url"
+                                name="./ajaxendpoint"
+                                wrapperClass="fts-inline-grid4"/>
+							<multipleSource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"                                
+                                name="./multipleSource"
+                                text="Allow auth based result set"
+                                value="true"/>
+							<authserverurl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"								
+                                fieldLabel="Auth result set servlet url"
+                                name="./authajaxendpoint"
+                                wrapperClass="fts-inline-grid4"/>
+                            <contentPath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldLabel="Enter the path of generic list"
+                                name="./contentPath"
+                                wrapperClass="select-options-path"/>
+                            <options-static
+                                granite:class="select-options-static"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <options
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Enter the values to display">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./options">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Display Text"
+                                                    name="title"
+                                                    wrapperClass="fts-inline-grid4"/>
+                                                <linkValue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Backend Value"
+                                                    name="value"
+                                                    wrapperClass="fts-inline-grid4"/>
+                                            </items>
+                                        </field>
+                                    </options>
+                                </items>
+                            </options-static>
+                        </items>
+                    </tab-options>
+                    <tab-conditional-properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Conditional Properties"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <parentID
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter the parent element id to bind as conditionals dropdown"
+                                name="./parentDropDownID"
+                                wrapperClass="fts-inline-grid4"/>
+                            <key
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter the Key for the js"
+                                name="./key"
+                                wrapperClass="fts-inline-grid4"/>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter the title"
+                                name="./title"
+                                wrapperClass="fts-inline-grid4"/>                            
+                        </items>
+                    </tab-conditional-properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

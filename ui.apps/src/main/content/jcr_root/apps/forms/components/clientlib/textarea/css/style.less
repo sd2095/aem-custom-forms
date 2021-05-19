@@ -1,0 +1,151 @@
+@import (less) 'textarea.css';
+
+.fts-formContainer--blue,
+.fts-formContainer--black,
+.fts-formContainer--grayDark,
+.fts-formContainer--grayLighter,
+.fts-formContainer--grayLightest {
+    ::-webkit-textarea-placeholder {
+        color: inherit;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        color: inherit;
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+        color: inherit;
+    }
+
+    :-ms-textarea-placeholder {  
+        color: inherit;
+    }
+}
+
+.fts-formContainer--white {
+	::-webkit-textarea-placeholder {
+		color: #afafaf;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+		color: #afafaf;
+	}
+  
+	::-moz-placeholder {  /* Firefox 19+ */
+		color: #afafaf;
+	}
+
+	:-ms-textarea-placeholder {  
+		color: #afafaf;
+	}
+}
+
+.fts-formContainer--myrefinitiv {
+	.fts-nested-textarea .fts-textarea {
+		padding: 12px 20px;
+    }
+}
+
+.fts-formContainer--marketing {
+	.fts-nested-textarea .fts-textarea {
+		padding: 11px 23px;
+    }
+}
+
+.fts-formTextarea--v1 {
+    .fts-nested-textarea .fts-textarea {
+        &:extend(.fts-textarea-field);
+    }
+
+}
+
+.fts-formTextarea--v2 {
+    .fts-nested-textarea .fts-textarea {
+        &:extend(.fts-textarea-field);
+        border-bottom: 0 !important;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .fts-nested-file {
+		display: block;
+	}
+
+
+    .fts-form-field-input:focus + .fts-nested-file {
+		border-width: 1px;
+        border-style: solid;
+        border-top: 0;
+    	outline: 0;
+    }
+
+    .fts-form-field-input.error:not(select) + .fts-nested-file {
+		border-width: 1px;
+        border-style: solid;
+        border-top: 0;
+    	outline: 0;
+    }
+
+    .fts-nested-file.fts-form-field-input{
+		border-top: 0 !important;
+    }
+
+}
+
+.fts-formContainer--blue,
+.fts-formContainer--black {
+	.fts-form-field-input.error:not(select) + .fts-nested-file,
+   	.fts-form-field-input:focus +.fts-nested-file {
+		border-color: #fff;
+    }
+}
+
+.fts-formContainer--grayDark {
+    .fts-form-field-input.error:not(select) + .fts-nested-file {
+		border-color: #dc0a0a;
+    }
+
+    .fts-form-field-input:focus +.fts-nested-file {
+		border-color: #f4f4f4;
+    }
+}
+
+.fts-formContainer--grayLighter {
+    .fts-form-field-input.error:not(select) + .fts-nested-file {
+		border-color: #dc0a0a;
+    }
+
+    .fts-form-field-input:focus +.fts-nested-file {
+		border-color: #404040;
+    }
+}
+
+.fts-formContainer--grayLightest {
+    .fts-form-field-input.error:not(select) + .fts-nested-file {
+		border-color: #dc0a0a;
+    }
+
+    .fts-form-field-input:focus +.fts-nested-file {
+		border-color: #404040;
+    }
+}
+
+.fts-formContainer--marketing.fts-formContainer--white {
+    .fts-form-field-input:focus + .fts-nested-file {
+		border-color: #404040;
+    }
+    
+	.fts-form-field-input.error:not(select) + .fts-nested-file {
+		border-color: #dc0a0a;
+    }
+}
+
+.fts-formContainer--myrefinitiv.fts-formContainer--white {
+    .fts-form-field-input:focus + .fts-nested-file {
+		border-color: #4d4d4d;
+    }
+
+	.fts-form-field-input.error:not(select) + .fts-nested-file {
+		border-color: #dc0a0a;
+    }
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+	<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+    <sly data-sly-call="${clientlib.css @ categories='xf.template.responsivegrid'}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+
+    <div data-sly-include="/libs/wcm/core/components/init/init.jsp"></div>
+    <div data-sly-resource="${'root' @ resourceType='wcm/foundation/components/responsivegrid'}"></div>
+
+</body>
+</html>

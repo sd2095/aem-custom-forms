@@ -1,0 +1,37 @@
+.fts-formContainer {
+  	max-width: 100%;
+  	min-width: 300px;
+}
+
+.fts-show {
+	display: block !important;
+}
+
+.fts-hidden {
+	display: none;
+}
+
+button, input, optgroup, select, textarea {
+	color: inherit;
+}
+
+.fts-loader {
+    width: 56px;
+    height: 56px;
+    border: 8px solid transparent;
+    border-top-color: #001eff;
+    border-bottom-color: #001eff;
+    border-radius: 50%;
+    position: fixed;
+    -webkit-animation: loader-rotate 1s linear infinite;
+    animation: loader-rotate 1s linear infinite;
+    top: calc(42%);
+    left: calc(50%);
+    display: none;
+	z-index: 1050;
+	position: fixed;
+}
+
+body.modal-open {
+    overflow: hidden;
+}

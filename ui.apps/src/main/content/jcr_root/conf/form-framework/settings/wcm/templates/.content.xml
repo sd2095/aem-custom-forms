@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <standard-page-editable-template/>
+    <fullwidth-page-editable-template/>
+    <custom-parsys-page-editable-template/>
+    <product-usage-editable-template/>
+    <refinitiv-experience-fragment-template/>
+</jcr:root>

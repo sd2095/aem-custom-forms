@@ -1,0 +1,27 @@
+.fts-button-text {
+	width: 100%;
+   	padding: 20px 40px;
+    background-clip: padding-box;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    position: relative;
+}
+
+.fts-form-button-label:disabled,
+.fts-form-button-label:disabled:hover,
+.fts-form-button-label:disabled:active {
+	text-decoration: none;
+    background-color: #afafaf;
+    border-color: #afafaf;
+    color: white;
+    cursor: not-allowed;
+}
+
+.fts-button-link:hover {
+	text-decoration: none;
+}
+
+.fts-svg.fts-button-svg {
+	display: none;
+}

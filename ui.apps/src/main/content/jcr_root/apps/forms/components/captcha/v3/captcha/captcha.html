@@ -1,0 +1,10 @@
+<div data-sly-use.model="com.forms.core.core.models.CaptchaModel" data-sly-unwrap></div>
+<div data-sly-test.author="${(wcmmode.edit || wcmmode.design)}" data-sly-unwrap></div>
+
+<div data-sly-test="${properties.fieldId}" data-sly-unwrap>
+    <div data-sly-test="${author || model.showGoogleCaptcha}" data-sly-resource="${'googlecaptcha' @resourceType='/apps/forge-txn/forms/captcha/v1/captcha'}"></div>
+    <div data-sly-test="${author || !model.showGoogleCaptcha}" data-sly-resource="${'jscaptcha' @resourceType='/apps/forge-txn/forms/captcha/v2/captcha'}"></div>
+</div>
+<div data-sly-test="${author && !properties.fieldId}">
+    <h3 style="color:red;"> Please configure the captcha ! </h3>
+</div>

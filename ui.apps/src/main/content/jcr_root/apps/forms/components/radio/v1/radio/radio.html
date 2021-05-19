@@ -1,0 +1,47 @@
+<template data-sly-template.i18="${@ key}">
+   ${key @ i18n}
+</template>
+
+<div data-sly-test.author="${(wcmmode.edit || wcmmode.design)}" data-sly-unwrap></div>
+<div data-sly-use.list="com.forms.core.core.models.MultifieldModel" data-sly-unwrap></div>
+<sly data-sly-test.checkgroup = "${list.groupDataMap}"></sly>
+<div data-sly-use.model="com.forms.core.core.models.FormElementValidatorModel" data-sly-unwrap></div>
+
+<div data-sly-test="${model.checkFormContainer @context='html'}" data-sly-unwrap>
+	<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+	<sly data-sly-call="${clientlib.css @ categories='forms.component.radio'}" />
+	<div data-sly-test="${properties.fieldId}" data-sly-unwrap>
+		<div class="fts-wrapper">
+			<div class="fts-form-field-label">${properties.fieldLabel @i18n}</div>
+			<div class="fts-form-field-sublabel">${properties.fieldSubLabel @i18n}</div>
+			<div id="querybox">
+				<div data-sly-repeat.key="${checkgroup ? list.groupDataMap.keySet.iterator : list.dataMap.keySet.iterator}" data-sly-unwrap>
+					<div class="fts-radio--box">
+						<div class="fts-radio-wrapper fts-form-field-text fts-radio-box--heading">${key @i18n}</div>
+						<div data-sly-repeat.aem="${checkgroup ? list.groupDataMap[key].keySet.iterator : list.dataMap[key]}" class="fts-radio-wrapper fts-border-color">
+							<label class="fts-radio--label">
+								<span class="fts-form-field-text">${checkgroup ? list.groupDataMap[key][aem] : key @i18n}</span>
+								<input type="radio" name="${properties.fieldId}" class="${properties.fieldId}" title="${checkgroup ? list.groupDataMap[key][aem] : aem}" value="${checkgroup ? list.groupDataMap[key][aem] : aem}">
+								<span class="fts-radio__bg"></span>
+								<div class="fts-svg fts-radio-img fts-arrow--right"></div>							
+							</label>
+						</div>
+					</div>
+				</div>  			
+				<label id="${properties.fieldId}-error" class="error" for="${properties.fieldId}"></label>
+			</div>
+		</div>
+		<div data-sly-test="${!author}">
+			<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+			<sly data-sly-call="${clientlib.js @ categories='forms.component.radio'}" />
+		</div>
+	</div>
+
+	<div data-sly-test="${author && !properties.fieldId}">
+		<h2 style="color : red;">Please configure the radio !</h2>
+	</div>
+</div>
+
+<div data-sly-test="${!model.checkFormContainer @context='html'}">
+	${model.message @context='html'}
+</div>

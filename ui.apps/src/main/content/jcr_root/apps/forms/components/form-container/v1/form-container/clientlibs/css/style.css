@@ -1,0 +1,18 @@
+.fts-inline-grid2 {
+
+	display : inline-block !important;
+    width : 45%;
+	margin-right : 15px;
+}
+
+coral-radio {
+	
+	display : inline-block !important;
+}
+
+.fts-inline-grid3{
+	
+	display : inline-block !important;
+	width : 30%;
+	margin-right : 10px;
+}

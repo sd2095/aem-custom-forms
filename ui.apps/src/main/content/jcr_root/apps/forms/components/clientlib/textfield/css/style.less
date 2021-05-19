@@ -1,0 +1,121 @@
+@import (less) 'textfield.css';
+
+.fts-formContainer--blue,
+.fts-formContainer--black,
+.fts-formContainer--grayDark,
+.fts-formContainer--grayLighter,
+.fts-formContainer--grayLightest {
+    ::-webkit-input-placeholder {
+        color: inherit;
+    }
+    
+    :-moz-placeholder { /* Firefox 18- */
+        color: inherit;
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+        color: inherit;
+    }
+    
+    :-ms-input-placeholder {  
+        color: inherit;
+    }
+}
+
+.fts-formContainer--white {
+    ::-webkit-input-placeholder {
+        color: #afafaf;
+    }
+    
+    :-moz-placeholder { /* Firefox 18- */
+        color: #afafaf;
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+        color: #afafaf;
+    }
+    
+    :-ms-input-placeholder {  
+        color: #afafaf;
+    }
+}
+
+.fts-formTextfield--v1 {
+    .fts-formTextfield-label {
+        &:extend(.fts-input-label);
+
+    }
+
+    .fts-form-field-input {
+        &:extend(.fts-input-field);
+        border-radius: 5px;
+        padding: 18px 20px;
+    }
+}
+
+.fts-formTextfield--v2 {
+    .fts-formTextfield-label {
+        &:extend(.fts-input-label);
+    }
+
+    .fts-form-field-input {
+        &:extend(.fts-input-field);
+        border-radius: 8px;
+        box-shadow: none;
+        min-height: 48px;
+        padding: 11px 23px;
+    }
+}
+
+.fts-formTextfield--v3 {
+    .fts-formTextfield-label {
+        &:extend(.fts-input-label);
+        position: absolute;
+		top: 4px;
+        transition: transform 150ms ease-out, font-size 150ms ease-out;
+    }
+
+    .fts-form-field-input {
+        &:extend(.fts-input-field);
+        transition: box-shadow 150ms ease-out;
+    }
+
+    .fts-form-field-label--focused.fts-formTextfield-label {
+		top: -12px;
+    }
+
+	.fts-form-field-sublabel {
+		display: none;
+    }
+
+    ::-webkit-input-placeholder {
+        color: transparent !important;
+    }
+	
+    :-moz-placeholder { /* Firefox 18- */
+		color: transparent !important;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+        color: transparent !important;
+    }
+
+    :-ms-input-placeholder {  
+        color: transparent !important;
+    }
+}
+
+.fts-formContainer--myrefinitiv {
+	.fts-formTextfield--v3 {
+        .fts-form-field-input {
+			&:extend(.fts-input-field);
+        	box-shadow: 0 1px 0 0 #d9d9d9;
+            /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+            -webkit-box-shadow: 0 1px 0 0 #d9d9d9;
+            /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+            -moz-box-shadow: 0 1px 0 0 #d9d9d9;
+            /* Firefox 3.5 - 3.6 */
+            border: 0 !important;
+        }
+    }
+}

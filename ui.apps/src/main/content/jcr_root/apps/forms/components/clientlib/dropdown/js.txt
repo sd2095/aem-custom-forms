@@ -1,0 +1,3 @@
+#base=js
+select2-lib.js
+script.js

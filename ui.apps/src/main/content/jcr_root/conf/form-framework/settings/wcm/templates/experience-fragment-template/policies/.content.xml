@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content        
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+            cq:policy="wcm/foundation/components/responsivegrid/policy_8947866646586621"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <forge-txn jcr:primaryType="nt:unstructured">
+                <forms jcr:primaryType="nt:unstructured">
+                    <button jcr:primaryType="nt:unstructured">
+                        <v1 jcr:primaryType="nt:unstructured">
+                            <button
+                                cq:policy="forms/components/button/v1/button/policy_1597399881234"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </v1>
+                    </button>
+                    <captcha jcr:primaryType="nt:unstructured">
+                        <v1 jcr:primaryType="nt:unstructured">
+                            <captcha
+                                cq:policy="forms/components/captcha/v1/captcha/policy_1598861201274"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </v1>
+                    </captcha>
+                    <checkbox jcr:primaryType="nt:unstructured">
+                        <v1 jcr:primaryType="nt:unstructured">
+                            <checkbox
+                                cq:policy="forms/components/checkbox/v1/checkbox/policy_1597305457532"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </v1>
+                    </checkbox>
+                    <form-container jcr:primaryType="nt:unstructured">
+                        <v1 jcr:primaryType="nt:unstructured">
+                            <form-container
+                                cq:policy="forms/components/form-container/v1/form-container/policy_1595843709970"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </v1>
+                    </form-container>
+                    <divider jcr:primaryType="nt:unstructured">
+                        <v1 jcr:primaryType="nt:unstructured">
+                            <divider
+                                cq:policy="forms/components/divider/v1/divider/policy_1596093115093"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </v1>
+                    </divider>
+                    <dropdown jcr:primaryType="nt:unstructured">
+                        <v1 jcr:primaryType="nt:unstructured">
+                            <dropdown
+                                cq:policy="forms/components/dropdown/v1/dropdown/policy_1597387850444"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </v1>
+                    </dropdown>
+                    <radio jcr:primaryType="nt:unstructured">
+                        <v1 jcr:primaryType="nt:unstructured">
+                            <radio
+                                cq:policy="forms/components/radio/v1/radio/policy_1598522189937"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </v1>
+                    </radio>
+                    <textfield jcr:primaryType="nt:unstructured">
+                        <v1 jcr:primaryType="nt:unstructured">
+                            <textfield
+                                cq:policy="forms/components/textfield/v1/textfield/policy_1595941686550"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </v1>
+                    </textfield>
+                </forms>
+            </forge-txn>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Captcha Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[forms.component.author-clientlib]"
+    height="800"
+    helpPath="https://www.adobe.com/go/aem6_2_docs_component_en"
+    width="800">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                rel="cq-siteadmin-admin-properties-tabs">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                    type="nav"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <tab-about-component
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="About the Component"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <about-the-component
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/text"
+                                text="This is a google captcha. Used for user verification as robot or not."/>
+                        </items>
+                    </tab-about-component>
+                    <tab-properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <name
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Specifies a unique id for the element. Naming rules: Must contain at least one character. Must contain first letter as character .Must not contain any space or tab characters."
+                                fieldLabel="Enter field Id"
+                                name="./fieldId"
+                                required="{Boolean}true"
+                                wrapperClass="fts-inline-grid5"/>
+                            <label
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter field label"
+                                name="./fieldlabel"
+                                wrapperClass="fts-inline-grid4"/>
+                            <subLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter field Sub label"
+                                name="./fieldSubLabel"
+                                wrapperClass="fts-inline-grid4"/>
+                            <sitekey
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="This is required for captcha validation."
+                                fieldLabel="Enter Site Key For Google Captcha"
+                                name="./sitekey"
+                                required="{Boolean}true"/>
+                        </items>
+                    </tab-properties>
+                    <tab-error-messages
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Validation Messages"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <errorMsg
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="This is used for displaying error message on server side validation"
+                                fieldLabel="Enter the captcha error mesage"
+                                name="./errorMsg"
+                                wrapperClass="fts-inline-grid4"/>
+                            <requiredMsg
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="This is used to display error message when captcha verification is not performed"
+                                fieldLabel="Enter the captcha required message"
+                                name="./requiredMsg"
+                                wrapperClass="fts-inline-grid4"/>
+                        </items>
+                    </tab-error-messages>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

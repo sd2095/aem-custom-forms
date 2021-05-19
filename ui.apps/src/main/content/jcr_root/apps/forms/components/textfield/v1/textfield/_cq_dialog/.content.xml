@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Textfield Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[forms.component.author-clientlib,forms.listener.textfield]"
+    height="800"
+    helpPath="https://www.adobe.com/go/aem6_2_docs_component_en"
+    width="800">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                rel="cq-siteadmin-admin-properties-tabs">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                    type="nav"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <tab-about-component
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="About the Component"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <about-the-component
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/text"
+                                text="Text input field.  Can be set as the appropriate browser input type (email, url, etc.)."/>
+                        </items>
+                    </tab-about-component>
+                    <tab-properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <name
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Specifies a unique id for the element. Naming rules: Must contain at least one character. Must contain first letter as character .Must not contain any space or tab characters."
+                                fieldLabel="Enter field Id"
+                                name="./fieldId"
+                                required="{Boolean}true"
+                                wrapperClass="fts-inline-grid4"/>
+                            <inputType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Selecting an appropriate input type can help users enter data more efficiently."
+                                fieldLabel="Input Type"
+                                name="./inputType"
+                                required="{Boolean}true"
+                                wrapperClass="fts-inline-grid4">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <text
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="{Boolean}true"
+                                        text="text"
+                                        value="text"/>
+                                    <email
+                                        jcr:primaryType="nt:unstructured"
+                                        text="email"
+                                        value="email"/>
+                                    <tel
+                                        jcr:primaryType="nt:unstructured"
+                                        text="telephone"
+                                        value="tel"/>
+                                    <url
+                                        jcr:primaryType="nt:unstructured"
+                                        text="URL"
+                                        value="url"/>
+                                    <pwd
+                                        jcr:primaryType="nt:unstructured"
+                                        text="password"
+                                        value="password"/>
+                                </items>
+                            </inputType>
+                            <label
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter field label"
+                                name="./fieldlabel"
+                                wrapperClass="fts-inline-grid4"/>
+                            <subLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter field Sub label"
+                                name="./fieldSubLabel"
+                                wrapperClass="fts-inline-grid4"/>
+                            <optionalLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter field optional label"
+                                name="./fieldOptionalLabel"
+                                wrapperClass="fts-inline-grid4"/>
+                            <placeholderLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter field Placeholder"
+                                name="./fieldPlaceholder"
+                                wrapperClass="fts-inline-grid4"/>
+                        </items>
+                    </tab-properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

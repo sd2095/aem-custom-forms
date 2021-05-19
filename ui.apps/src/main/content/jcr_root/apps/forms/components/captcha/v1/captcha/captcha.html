@@ -1,0 +1,31 @@
+<template data-sly-template.i18="${@ key}">
+   ${key @ i18n}
+</template>
+
+<div data-sly-test.author="${(wcmmode.edit || wcmmode.design)}" data-sly-unwrap></div>
+
+<sly data-sly-test="${properties.fieldId}" data-sly-unwrap>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<div data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+		<clientlib data-sly-call="${clientLib.js @ categories=['forms.component.captcha']}" data-sly-unwrap />
+	</div>
+	<div class="fts-wrapper">
+		<label class="fts-form-field-label" for="${properties.fieldId}">
+			${properties.fieldlabel @i18n}
+			<div class="fts-form-field-sublabel">${properties.fieldSubLabel @i18n}</div>
+			<div id="${properties.fieldId}" class="g-recaptcha" data-callback="recaptchaCallback"
+				data-sitekey="${properties.sitekey}"></div>
+			<label id="${properties.fieldId}-error" class="fts-error fts-hidden" for="${properties.fieldId}"></label>
+		</label>
+	</div>
+</sly>
+
+<div data-sly-test="${author && !properties.fieldId}">
+	<h2 style="color : red;">Please configure the Google Captcha !</h2>
+</div>
+
+<script>
+	var fieldId = "${properties.fieldId @context='scriptString'}";
+	var captchaerrormsg = "${properties.errorMsg || 'Please verify again' @context='scriptString'}";
+	var captchaRequiredMsg = "${properties.requiredMsg || 'Please verify the captcha' @context='scriptString'}";
+</script>

@@ -1,0 +1,75 @@
+@import (less) 'radio.css';
+
+.fts-radio--v1 {
+    .fts-radio-inputfield,
+    .fts-radio-img,
+    .fts-radio-box--heading {
+        display: none;
+    }
+	
+	.fts-radio-wrapper label {
+    	padding: 10px 10px 10px 27px;
+    }
+	
+	.fts-radio-wrapper input[type="radio"] + .fts-radio__bg {
+		background-color: transparent;
+    }
+}
+
+.fts-radio--v2 {
+    .fts-radio-inputfield,
+    .fts-radio-img,
+    .fts-radio-box--heading {
+        display: none;
+    }
+
+    .fts-radio-wrapper {
+        border-width: 1px;
+		border-style: solid;
+        border-radius: 5px;
+        padding: 17px 17px 17px 41px;
+    }
+
+    .fts-radio-wrapper input[type="radio"]+.fts-radio__bg {
+        left: -25px;
+        top: 12px;
+        background-color: transparent;
+    }
+}
+
+.fts-radio--v3 {
+    border-top: 30px solid #f4f4f4;
+    .fts-form-field-label,
+    .fts-form-field-sublabel,
+    .fts-radio-inputfield,
+    .fts-radio-wrapper input[type="radio"]+.fts-radio__bg {
+        display: none !important;
+    }
+
+    .fts-wrapper {
+        padding-bottom: 0 !important;
+    }
+    
+    .fts-radio-wrapper {
+        border-top: 1px solid;
+        padding: 18px 40px;
+    }
+
+    .fts-radio-wrapper:first-child {
+        border-top: 0;
+    }
+
+    .fts-radio--box {
+        border-bottom: 30px solid #f4f4f4;
+    }
+
+    .error {
+        display: none !important;
+    }
+    
+    @media screen and (max-width: 1259px) {
+        .fts-radio-wrapper {
+            padding: 18px 20px;
+        }
+    }
+}

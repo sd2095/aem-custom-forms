@@ -1,0 +1,49 @@
+<template data-sly-template.i18="${@ key}">
+   ${key @ i18n}
+</template>
+
+
+<sly data-sly-test.author="${(wcmmode.edit || wcmmode.design)}" />
+<div data-sly-use.model="com.forms.core.core.models.FormElementValidatorModel" data-sly-unwrap></div>
+
+<div data-sly-test="${model.checkFormContainer @context='html'}" data-sly-unwrap>
+	<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientlib.all @ categories='forms.component.dropdown'}" />
+	<div data-sly-test="${properties.fieldId}"
+		class="fts-dropdown-body${properties.enableTypeAhead ? ' fts-dropdown-typeAhead' : ''}${(properties.hideDropdown && !author) ? ' fts-hidden' : ''}"
+		id="${properties.valueId}">
+		<div class="fts-wrapper fts-form__group" for="${properties.fieldId}">
+			<label data-sly-test="${properties.label}" class="fts-form-field-label fts-dropdown-labelText">
+				${properties.label @i18n}<span class="fts-form-field-optional">${properties.optionalLabel @i18n}</span>
+				<div data-sly-test="${properties.subLabel}" class="fts-form-field-sublabel">${properties.subLabel @i18n}</div>
+			</label>
+			<select id="${properties.fieldId}" name="${properties.fieldId}" style="width: 100%" class="validate">
+				<option data-sly-test="${!properties.multipleSelection}"></option> <!-- This is needed to display default placeholder -->
+			</select>
+			<label id="${properties.fieldId}-error" class="error" for="${properties.fieldId}"></label>
+			<div class="fts-hidden" id="fts-dropdown-icons">
+				<svg class="fts-dropdown-upArrow fts-hidden" viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M16 10l-4 4-4-4" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2">
+					</path>
+				</svg>
+				<svg class="fts-dropdown-downArrow fts-hidden" viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M8 14l4-4 4 4" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2">
+					</path>
+				</svg>
+			</div>
+		</div>
+	</div>
+	
+	<div data-sly-test="${author && !properties.fieldId}">
+		<h2 style="color : red;">Please configure the dropdown !</h2>
+	</div>
+
+	<script data-sly-use.model="com.forms.core.core.models.DropdownScript">
+	${model.script @context='unsafe'}
+	</script>
+
+</div>
+
+<div data-sly-test="${!model.checkFormContainer @context='html'}">
+	${model.message @context='html'}
+</div>

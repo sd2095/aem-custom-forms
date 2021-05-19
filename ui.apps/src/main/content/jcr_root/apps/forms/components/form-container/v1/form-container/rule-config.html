@@ -1,0 +1,26 @@
+<script data-sly-use.validationRules="com.forms.core.core.models.FormRulesModel"
+        data-sly-use.dropdownScript="com.forms.core.core.models.ScriptGenerator"
+        data-sly-use.constraintConfig="com.forms.core.core.models.FormConfig"
+        data-sly-use.analyticsConfig="com.forms.core.core.models.FormAnalyticsModel"
+        data-sly-use.formSubmitConfig="com.forms.core.core.models.FormSubmitModel" >
+
+var jsonData;
+var userDataCntxtHub;
+var productDataCntxtHub;
+var constData = '${constraintConfig.constraints @context="unsafe"}';
+${validationRules.constraints @context='unsafe'}
+${dropdownScript.script @ context='unsafe'}
+${analyticsConfig.formAnalyticsScript @ context='unsafe'}
+
+
+$(document).ready(function () {
+
+    var constraintsJSON = constData ? JSON.parse(constData) : "";
+	var fieldId = "${properties.fieldId @context='scriptString'}";	
+
+${formSubmitConfig.formAction @ context='unsafe'}
+
+
+});
+
+</script>

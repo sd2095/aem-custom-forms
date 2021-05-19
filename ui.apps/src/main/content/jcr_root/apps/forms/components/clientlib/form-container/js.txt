@@ -1,0 +1,3 @@
+#base=js
+customrules.js
+script.js

@@ -1,0 +1,27 @@
+<template data-sly-template.i18="${@ key}">
+   ${key @ i18n}
+</template>
+
+<div data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+    <clientlib data-sly-call="${clientLib.all @ categories=['forms.component.captcha']}" data-sly-unwrap />
+</div>
+<div data-sly-test.author="${(wcmmode.edit || wcmmode.design)}" data-sly-unwrap></div>
+
+<div data-sly-test="${properties.fieldId}" data-sly-unwrap>
+   <div class="fts-wrapper captcha-box" id="${properties.fieldId}-wrapper">
+        <label class="fts-form-field-label" for="${properties.fieldId}">
+			${properties.labelTitle @i18n}
+			<div class="fts-form-field-sublabel">${properties.subLabel @i18n}</div>
+			<div>
+                <span class="captcha-content" id="mainCaptcha"></span>
+                <p><a id="refresh" value="Refresh" onclick="captcha()" class="refresh-captcha fts-form-field-label--focused">${properties.refresh}</a></p> 
+                <p id="captcha-answer" class="fts-form-field-text">${properties.captchaTitle @i18n}</p>
+                <input type="text" class="captcha-verify fts-form-field-input" name="${properties.fieldId}" id="${properties.fieldId}">
+            </div>
+            <p id="outputresult" style="display:none"></p>
+		</label>
+    </div>
+</div>
+<div data-sly-test="${author && !properties.fieldId}">
+    <h3 style="color:red;"> Please configure the captcha ! </h3>
+</div>

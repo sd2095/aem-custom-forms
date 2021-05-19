@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Form Container"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="forms.listener.formContainer"
+    height="800"
+    helpPath="https://www.adobe.com/go/aem6_2_docs_component_en"
+    width="800">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                rel="cq-siteadmin-admin-properties-tabs">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                    type="nav"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <tab-about-component
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="About the Component"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <about-the-component
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/text"
+                                text="Form Container. Can consist of all the form components, form submit action and server url can be configured."/>
+                        </items>
+                    </tab-about-component>
+                    <tab-properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <name
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Form Name"
+                                name="./fieldId"
+                                required="{Boolean}true"/>
+                            <showcontainer
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                name="./showcontainer"
+                                text="Show this form container on page load"
+                                value="true"/>
+                            <option-type
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                fieldLabel="Form Action Source"
+                                name="./formActionType"
+                                required="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <inbuilt
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Inbuilt"
+                                        value="inbuilt"/>
+                                    <jscript
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Client Libs"
+                                        value="jscript"/>
+                                    <server
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Rule Editor"
+                                        value="redit"/>
+                                </items>
+                            </option-type>
+                            <servletUrl
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Enter the server url"
+                                name="./servletUrl"/>
+                            <clientLibName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Add the clientLib Category for form submit action here"
+                                name="./clientLibName"/>
+                            <additionalScript
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldLabel="Rule Editor"
+                                name="./script"/>
+                            <success_modal_mfield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Modal Configuration for Ajax Success Scenario">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./success_modal_config">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <modalconfig
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Enter message / status code to map with the modal"
+                                            name="./modal_msg"/>
+                                        <modalName
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Select modal to be displayed"
+                                            name="./modal_fieldId">
+                                            <datasource
+                                                jcr:primaryType="nt:unstructured"
+												retrieve="modals"
+                                                sling:resourceType="/bin/forms/fieldnamedatasource"/>
+                                        </modalName>
+                                    </items>
+                                </field>
+                            </success_modal_mfield>
+                            <error_modal_mfield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Modal Configuration for Ajax Error Scenario">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./error_modal_config">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <modalconfig
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Enter message / status code to map with the modal"
+                                            name="./modal_msg"/>
+                                        <modalName
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Select modal to be displayed"
+                                            name="./modal_fieldId">
+                                            <datasource
+                                                jcr:primaryType="nt:unstructured"
+												retrieve="modals"
+                                                sling:resourceType="/bin/forms/fieldnamedatasource"/>
+                                        </modalName>
+                                    </items>
+                                </field>
+                            </error_modal_mfield>
+                        </items>
+                    </tab-properties>
+                    <tab-analytics
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Form Analytics"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <formAnalytics
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                fieldLabel="Enable / disable form analytics"
+                                name="./formAnalytics"/>
+                            <formReason
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Add the form reason text for analytics"
+                                name="./formReason"/>
+                            <formSuccessType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Add the form success type for analytics"
+                                name="./formType"/>
+                            <analyticsTrigger
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Form Start Analytics Trigger">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./formAnalyticsTrigger">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <componentList
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldDescription="Component list through which analytics will be triggered on change"
+                                            fieldLabel="Select components "
+                                            name="./componentCss">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <item1
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Textfield"
+                                                    value="fts-form-field-input"/>
+                                                <item2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Dropdown"
+                                                    value="fts-formDropdown-select"/>
+                                                <item3
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Checkbox"
+                                                    value="check-checkbox"/>
+                                            </items>
+                                        </componentList>
+                                    </items>
+                                </field>
+                            </analyticsTrigger>
+                        </items>
+                    </tab-analytics>
+                    <tab-validation
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Validation"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <rulepath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                fieldLabel="Jquery Validation Rule Path"
+                                name="./rulepath"/>
+                            <mfield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                addFieldLabel="Add Constraint"
+                                composite="{Boolean}true"
+                                fieldLabel="Global Constraints">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./global_constraint_parent">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <fieldName
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Select field name"
+											wrapperClass="fts-inline-grid3"
+                                            name="./global_constraint_fieldname">
+                                            <datasource
+                                                jcr:primaryType="nt:unstructured"
+												retrieve="formElements"
+                                                sling:resourceType="/bin/forms/fieldnamedatasource"/>
+                                        </fieldName>
+                                        <fieldConstraint
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Select Parameter"
+											wrapperClass="fts-inline-grid3"
+                                            name="./global_constraint_fieldconstraint">
+                                            <datasource
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="/bin/forms/constraintdatasource"/>
+                                        </fieldConstraint>
+                                        <validationmessage
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Validation Message"
+											wrapperClass="fts-inline-grid3"
+                                            name="./global_constraint_message"/>
+                                    </items>
+                                </field>
+                            </mfield>
+                        </items>
+                    </tab-validation>
+                    <tab-additionalProps
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Advanced Settings"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <auto-populate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                fieldLabel="Enable / disable auto-populate form elements"
+                                name="./prePopulate"/>
+                            
+                            <mfield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Add Form Element Mappings">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./param_map">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <paramKey
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Parameter Key"
+											wrapperClass="fts-inline-grid2"
+                                            name="./param_key"/>
+                                        <paramValueMap
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Element Map"
+											wrapperClass="fts-inline-grid2"
+                                            name="./element_map">
+                                            <datasource
+                                                jcr:primaryType="nt:unstructured"
+												retrieve="paramElements"
+                                                sling:resourceType="/bin/forms/fieldnamedatasource"/>
+                                        </paramValueMap>
+										<option-type
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+											fieldLabel="Auto populate source"
+											name="./formsrc">
+											<items jcr:primaryType="nt:unstructured">
+												<urlparam
+													jcr:primaryType="nt:unstructured"
+													text="Url Parameters"
+													value="urlparam"/>
+												<contexthub
+													jcr:primaryType="nt:unstructured"
+													text="Context Hub Data"
+													value="contexthub"/>
+											</items>
+										</option-type>
+                                    </items>
+                                </field>
+                            </mfield>
+                        </items>
+                    </tab-additionalProps>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

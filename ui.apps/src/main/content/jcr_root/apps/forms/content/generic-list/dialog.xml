@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Enter the below details">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the title of the item to be displayed"
+                        name="./title"
+                        xtype="textfield"/>
+                    <value
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the value of the item (to be send to backend)"
+                        name="./value"
+                        xtype="textfield"/>
+                    <parentValue
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the parent value to be mapped"
+                        name="./parentValue"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

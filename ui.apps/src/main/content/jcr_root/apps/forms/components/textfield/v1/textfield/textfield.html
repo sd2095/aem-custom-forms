@@ -1,0 +1,27 @@
+<template data-sly-template.i18="${@ key}">
+   ${key @ i18n}
+</template>
+
+<div data-sly-test.author="${(wcmmode.edit || wcmmode.design)}" data-sly-unwrap></div>
+<div data-sly-use.model="com.forms.core.core.models.FormElementValidatorModel" data-sly-unwrap></div>
+
+<div data-sly-test="${model.checkFormContainer @context='html'}" data-sly-unwrap>	
+    <div data-sly-test="${properties.fieldId}" data-sly-unwrap>
+		<div class="fts-wrapper">
+			<div class="fts-form__group">    
+				<label class="fts-form-field-label fts-formTextfield-label" for="${properties.fieldId}">${properties.fieldlabel @i18n}
+					<span class="fts-form-field-optional">${properties.fieldOptionalLabel @i18n}</span>
+					<div class="fts-form-field-sublabel">${properties.fieldSubLabel @i18n}</div>
+				</label>
+				<input id="${properties.fieldId}" name="${properties.fieldId}" type="${properties.inputType}" class="fts-form-field-input" placeholder="${properties.fieldPlaceholder}" type="text" autocomplete="off" />
+			</div>
+		</div>		
+    </div>
+    <div data-sly-test="${author && !properties.fieldId}">
+        <h2 style="color : red;">Please configure the text field !</h2>
+    </div>
+</div>
+
+<div data-sly-test="${!model.checkFormContainer @context='html'}">
+	${model.message @context='html'}
+</div>

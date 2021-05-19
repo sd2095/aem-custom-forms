@@ -1,0 +1,22 @@
+<sly data-sly-test.author="${(wcmmode.edit || wcmmode.design)}"/>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.all @ categories='forms.component.formcontainer'}" />
+
+
+<div data-sly-test="${author && !properties.fieldId}">
+	<h2 style="color : red;">Please configure the Form Container !</h2>
+</div>
+
+<div data-sly-test="${properties.fieldId}" data-sly-unwrap>
+	<form id="${properties.fieldId}" data-form-reason="${properties.formReason}" data-form-type="${properties.formType}" action="" class="validationform">
+		<sly data-sly-resource="${'formContainer' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+		<div data-sly-test="${!author}" data-sly-include="rule-config.html" data-sly-unwrap></div>		
+	</form>
+	<div class="modal-backdrop fade in" id="background-fade"></div>
+	<div class="fts-loader"></div>
+</div>
+
+<div data-sly-test="${!author && properties.formActionType=='jscript'}" data-sly-unwrap>
+	<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+	<sly data-sly-call="${clientlib.all @ categories=properties.clientLibName}" />
+</div> 

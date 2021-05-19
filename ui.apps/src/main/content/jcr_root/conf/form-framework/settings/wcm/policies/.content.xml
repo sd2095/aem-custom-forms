@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">                
+				<responsivegrid jcr:primaryType="nt:unstructured">
+                    <policy_8947866646586621                        
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="XF Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/dam/cfm/components/contentfragment,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/foundation/components/responsivegrid,group:Forms]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_8947866646586621>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
+    <forms jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <form-container jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                    <form-container jcr:primaryType="nt:unstructured">
+                        <policy_1595843709970
+                            cq:styleDefaultClasses="fts-formContainer fts-formContainer--white fts-formContainer--v1 fts-verticalSpacing-bottom--v2"
+                            jcr:lastModified="{Date}2020-07-27T15:27:26.096+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generic Form Container Policy"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Site Variations"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-formContainer--v1"
+                                            cq:styleId="1599132494656"
+                                            cq:styleLabel="Container v1"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-formContainer--v2"
+                                            cq:styleId="1599132505654"
+                                            cq:styleLabel="Container v2"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                                <item1
+                                    cq:styleGroupLabel="Color Variations"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-formContainer fts-formContainer--blue"
+                                            cq:styleId="1595843760435"
+                                            cq:styleLabel="Blue"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-formContainer fts-formContainer--black"
+                                            cq:styleId="1595843773296"
+                                            cq:styleLabel="Black"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item2
+                                            cq:styleClasses="fts-formContainer fts-formContainer--white"
+                                            cq:styleId="1595843792334"
+                                            cq:styleLabel="White"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item3
+                                            cq:styleClasses="fts-formContainer fts-formContainer--grayDark"
+                                            cq:styleId="1595843796046"
+                                            cq:styleLabel="Dark Grey"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item4
+                                            cq:styleClasses="fts-formContainer fts-formContainer--grayLighter"
+                                            cq:styleId="1595843814276"
+                                            cq:styleLabel="Lighter Grey"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item5
+                                            cq:styleClasses="fts-formContainer fts-formContainer--grayLightest"
+                                            cq:styleId="1595843827108"
+                                            cq:styleLabel="Lightest Grey"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item1>
+								<item2
+                                    cq:styleGroupLabel="Bottom Vertical Spacing"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-verticalSpacing-bottom--v1"
+                                            cq:styleId="1599633553326"
+                                            cq:styleLabel="Spacing (10px)"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-verticalSpacing-bottom--v2"
+                                            cq:styleId="1599633605102"
+                                            cq:styleLabel="Spacing (20px)"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item2
+                                            cq:styleClasses="fts-verticalSpacing-bottom--v3"
+                                            cq:styleId="1599633613286"
+                                            cq:styleLabel="Spacing (24px)"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item3
+                                            cq:styleClasses="fts-verticalSpacing-bottom--v4"
+                                            cq:styleId="1599643785625"
+                                            cq:styleLabel="Spacing (30px)"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item4
+                                            cq:styleClasses="fts-verticalSpacing-bottom--v5"
+                                            cq:styleId="1599643789117"
+                                            cq:styleLabel="Spacing (32px)"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item2>
+                            </cq:styleGroups>
+                        </policy_1595843709970>
+                    </form-container>
+                </v1>
+            </form-container>
+			<textfield jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                    <textfield jcr:primaryType="nt:unstructured">
+                        <policy_1595941686550
+                            cq:styleDefaultClasses="fts-formTextfield--v1"
+                            jcr:lastModified="{Date}2020-09-04T19:17:49.251+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generic Form Textfield Policy"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2020-07-29T11:23:39.131+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="UI Variations"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-formTextfield--v1"
+                                            cq:styleId="1595942224213"
+                                            cq:styleLabel="Standard Input"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-formTextfield--v2"
+                                            cq:styleId="1595942245441"
+                                            cq:styleLabel="Small Input"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item2
+                                            cq:styleClasses="fts-formTextfield--v3"
+                                            cq:styleId="1595942261834"
+                                            cq:styleLabel="Embedded Input"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </policy_1595941686550>
+                    </textfield>
+                </v1>
+            </textfield>
+            <divider jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                    <divider jcr:primaryType="nt:unstructured">
+                        <policy_1596093115093
+                            cq:styleDefaultClasses="fts-border-color--grayLighter fts-border-style--thin fts-border-style--solid"
+                            jcr:lastModified="{Date}2020-08-28T10:38:26.455+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generic Form Divider Policy"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2020-07-30T14:09:06.627+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Border Color"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-border-color--white"
+                                            cq:styleId="1596093192136"
+                                            cq:styleLabel="White"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-border-color--black"
+                                            cq:styleId="1596093198953"
+                                            cq:styleLabel="Black"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item2
+                                            cq:styleClasses="fts-border-color--grayLighter"
+                                            cq:styleId="1596093211784"
+                                            cq:styleLabel="Gray"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item3
+                                            cq:styleClasses="fts-border-color--grayDark"
+                                            cq:styleId="1596093221790"
+                                            cq:styleLabel="Dark Gray"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                                <item1
+                                    cq:styleGroupLabel="Border Height"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-border-style--thin"
+                                            cq:styleId="1596093264435"
+                                            cq:styleLabel="Thin (1px)"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-border-style--thick"
+                                            cq:styleId="1596093283923"
+                                            cq:styleLabel="Thick (2px)"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item1>
+                                <item2
+                                    cq:styleGroupLabel="Border Style"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-border-style--solid"
+                                            cq:styleId="1596093354233"
+                                            cq:styleLabel="Solid"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-border-style--dashed"
+                                            cq:styleId="1596093362527"
+                                            cq:styleLabel="Dashed"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item2>
+                            </cq:styleGroups>
+                        </policy_1596093115093>
+                    </divider>
+                </v1>
+            </divider>
+			<checkbox jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                    <checkbox jcr:primaryType="nt:unstructured">
+                        <policy_1597305457532
+                            cq:styleDefaultClasses="fts-checkbox--v1"
+                            jcr:lastModified="{Date}2020-09-20T14:26:30.279+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generic Form Checkbox Policy"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2020-08-13T19:09:27.808+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="UI Variation"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-checkbox--v1"
+                                            cq:styleId="1597319436354"
+                                            cq:styleLabel="Checkbox with rich text editor"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-checkbox--v2"
+                                            cq:styleId="1600323928736"
+                                            cq:styleLabel="Checkbox combo"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item2
+                                            cq:styleClasses="fts-checkbox--v3"
+                                            cq:styleId="1600591887864"
+                                            cq:styleLabel="Checkbox combo with input box"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                                <item1
+                                    cq:styleGroupLabel="Border Design"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-checkbox-border--v1"
+                                            cq:styleId="1600592088931"
+                                            cq:styleLabel="Border corner single rounded"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-checkbox-border--v2"
+                                            cq:styleId="1600592119787"
+                                            cq:styleLabel="Border corner full rounded"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item1>
+                                 <item2
+                                    cq:styleGroupLabel="Selection Variation"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-checkbox-select--v1"
+                                            cq:styleId="1600940337703"
+                                            cq:styleLabel="Partially Selected"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item2>
+                            </cq:styleGroups>
+                        </policy_1597305457532>
+                    </checkbox>
+                </v1>
+            </checkbox>
+            <button jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                    <button jcr:primaryType="nt:unstructured">
+                        <policy_1597399881234
+                            cq:styleDefaultClasses="fts-button-color--orange fts-button--standard fts-button-position--v1"
+                            jcr:lastModified="{Date}2020-09-03T17:12:51.667+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generic Form Button Policy"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2020-08-19T13:51:07.493+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Button Color"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-button-color--orange"
+                                            cq:styleId="1597758077202"
+                                            cq:styleLabel="Orange"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-button-color--white"
+                                            cq:styleId="1597758078697"
+                                            cq:styleLabel="White"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item2
+                                            cq:styleClasses="fts-button-color--green"
+                                            cq:styleId="1597758079866"
+                                            cq:styleLabel="Green"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item3
+                                            cq:styleClasses="fts-button-color--blue"
+                                            cq:styleId="1597758080960"
+                                            cq:styleLabel="Blue"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item4
+                                            cq:styleClasses="fts-button-color--gray"
+                                            cq:styleId="1597758081975"
+                                            cq:styleLabel="Gray"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item5
+                                            cq:styleClasses="fts-button-color--darkgray"
+                                            cq:styleId="1597758082925"
+                                            cq:styleLabel="Darkgray"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                                <item1
+                                    cq:styleGroupLabel="Button Style"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-button--standard"
+                                            cq:styleId="1597757933889"
+                                            cq:styleLabel="Standard"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-button--pill"
+                                            cq:styleId="1597758019378"
+                                            cq:styleLabel="Pill"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item2
+                                            cq:styleClasses="fts-button--plain"
+                                            cq:styleId="1598274145677"
+                                            cq:styleLabel="Plain text"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item1>
+                                <item2
+                                    cq:styleGroupLabel="Button position"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-button-position--v1"
+                                            cq:styleId="1597399930078"
+                                            cq:styleLabel="Left"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-button-position--v2"
+                                            cq:styleId="1597402733879"
+                                            cq:styleLabel="Right"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item2
+                                            cq:styleClasses="fts-button-position--v3"
+                                            cq:styleId="1597402744756"
+                                            cq:styleLabel="Center"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item2>
+                                <item3
+                                    cq:styleGroupLabel="Icon Visibility"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-svg--visible"
+                                            cq:styleId="1598277962051"
+                                            cq:styleLabel="Arrow visible"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item3>
+                            </cq:styleGroups>
+                        </policy_1597399881234>
+                    </button>
+                </v1>
+            </button>
+            <dropdown jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                    <dropdown jcr:primaryType="nt:unstructured">
+                        <policy_1597387850444
+                            cq:styleDefaultClasses="fts-dropdown fts-dropdown--v1"
+                            jcr:lastModified="{Date}2020-09-08T21:06:19.554+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generic Form Dropdown Policy"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Functional variants"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-dropdown fts-dropdown--v1"
+                                            cq:styleId="1597387956212"
+                                            cq:styleLabel="Standard Dropdown"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-dropdown fts-dropdown--v2"
+                                            cq:styleId="1597387935231"
+                                            cq:styleLabel="Embedded Dropdown"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item2
+                                            cq:styleClasses="fts-dropdown fts-dropdown--v3"
+                                            cq:styleId="1598949655614"
+                                            cq:styleLabel="Pill Dropdown"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                                <item1
+                                    cq:styleGroupLabel="Pill Button Alignmnet"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-dropdown--v3--right"
+                                            cq:styleId="1599031209979"
+                                            cq:styleLabel="Right"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-dropdown--v3--left"
+                                            cq:styleId="1599031240902"
+                                            cq:styleLabel="Left"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item1>
+                                <item2
+                                    cq:styleGroupLabel="Icon variation"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-dropdown-icon--user"
+                                            cq:styleId="1599127229858"
+                                            cq:styleLabel="User"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item2>
+                                <item3
+                                    cq:styleGroupLabel="Icon Alignment"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-dropdown-iconAlignment--left"
+                                            cq:styleId="1599135508563"
+                                            cq:styleLabel="Left"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-dropdown-iconAlignment--right"
+                                            cq:styleId="1599135526486"
+                                            cq:styleLabel="Right"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item3>
+                            </cq:styleGroups>
+                        </policy_1597387850444>
+                    </dropdown>
+                </v1>
+            </dropdown>
+			<radio jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                    <radio jcr:primaryType="nt:unstructured">
+                        <policy_1598522189937
+                            cq:styleDefaultClasses="fts-radio fts-radio--v1"
+                            jcr:lastModified="{Date}2020-08-28T11:54:06.680+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generic Form Radio Policy"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="UI Variations"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-radio fts-radio--v1"
+                                            cq:styleId="1598522234814"
+                                            cq:styleLabel="Standard"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-radio fts-radio--v2"
+                                            cq:styleId="1598522251559"
+                                            cq:styleLabel="Standard with box"
+                                            jcr:primaryType="nt:unstructured"/>                                        
+                                        <item2
+                                            cq:styleClasses="fts-radio fts-radio--v3"
+                                            cq:styleId="1598522302686"
+                                            cq:styleLabel="Radio list"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </policy_1598522189937>
+                    </radio>
+                </v1>
+            </radio>
+			<captcha jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                    <captcha jcr:primaryType="nt:unstructured">
+                        <policy_1598861201274
+                            cq:styleDefaultClasses=""
+                            jcr:lastModified="{Date}2020-08-31T15:21:25.935+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generic Form Captcha Policy"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_1598861201274>
+                    </captcha>
+                </v1>
+            </captcha>
+			<textarea jcr:primaryType="nt:unstructured">
+                <v1 jcr:primaryType="nt:unstructured">
+                    <textarea jcr:primaryType="nt:unstructured">
+                        <policy_1600701161276
+                            cq:styleDefaultClasses="fts-formTextarea--v1"
+                            jcr:lastModified="{Date}2020-09-21T21:55:30.424+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Generic Form Textarea Policy"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2020-09-21T20:47:17.486+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="UI Variation"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="fts-formTextarea--v1"
+                                            cq:styleId="1600701228072"
+                                            cq:styleLabel="Without  Attatchment"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="fts-formTextarea--v2"
+                                            cq:styleId="1600705505514"
+                                            cq:styleLabel="With  Attatchment"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </policy_1600701161276>
+                    </textarea>
+                </v1>
+            </textarea>
+        </components>
+    </forms>
+</jcr:root>
